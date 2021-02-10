@@ -1,18 +1,21 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
+ * print_last_digit - returns the value of the last digit of n
+ * @n: An integer number
  *
- * Return: Always 0.
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-int main(void)
+int print_last_digit(int n)
 {
-	int r;
+	int i;
 
-	print_last_digit(98);
-	print_last_digit(0);
-	r = print_last_digit(-1024);
-	_putchar('0' + r);
-	_putchar('\n');
-	return (0);
+	i = n % 10;
+	if (i < 0)
+	{
+		i = i * -1;
+	}
+	_putchar('0' + i);
+	return (i);
 }
