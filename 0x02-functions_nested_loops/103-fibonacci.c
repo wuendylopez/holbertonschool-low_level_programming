@@ -1,26 +1,30 @@
+#include "holberton.h"
 #include <stdio.h>
+
 /**
- * main - Prints the sum of even-valued Fibonacci sequence
- *        terms not exceeding 4000000.
+ * main - Entry point
  *
- * Return: Always void.
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	unsigned long fib1 = 0, fib2 = 1, fibsum;
-	float tot_sum;
+	long int n, m, c, e, l;
 
-	while (true)
+	n = 1;
+	m = 2;
+	e = 2;
+	l = 4000000;
+	c = 0;
+	while (c <= l)
 	{
-		fibsum = fib1 + fib2;
-		if (fibsum > 4000000)
-			break;
-		if ((fibsum % 2) == 0)
-			tot_sum += fibsum;
-		fib1 = fib2;
-		fib2 = fibsum;
+		c = m + n;
+		n = m;
+		m = c;
+		if ((c % 2 == 0) && (c <= l))
+		{
+			e = e + c;
+		}
 	}
-	printf("%.0f\n", tot_sum);
-
+	printf("%li\n", e);
 	return (0);
 }
