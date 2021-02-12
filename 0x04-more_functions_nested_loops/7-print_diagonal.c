@@ -18,9 +18,11 @@ void print_diagonal(int n)
 	else
 	{
 		int space = 0;
+
 		for (i = 1; i <= n; i++)
 		{
 			int j;
+
 			for (j = 0; j < space; j++)
 			{
 			_putchar(' ');
